@@ -53,9 +53,11 @@ const meetSchema = new mongoose.Schema(
     },
     dressCode: {
       type: String,
+      default: "None"
     },
     ageRestrictions: {
       type: String,
+      default: "No age restriction"
     },
     coverImage: {
       type: String,
