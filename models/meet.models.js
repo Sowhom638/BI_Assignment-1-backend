@@ -14,7 +14,7 @@ const meetSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    tages: {
+    tags: {
       type: [String],
       enum: [
         "Workshop",
@@ -42,6 +42,10 @@ const meetSchema = new mongoose.Schema(
     ended: {
       type: String,
       required: true,
+    },
+    isOnline:{
+      type: Boolean,
+      required: true
     },
     price: {
       type: String,
