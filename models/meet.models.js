@@ -43,6 +43,10 @@ const meetSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    address: {
+      type: String,
+      required: true,
+    },
     type:{
       type: String,
       enum: ['Online', 'Offline', 'Both'],
