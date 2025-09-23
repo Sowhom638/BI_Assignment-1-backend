@@ -43,8 +43,9 @@ const meetSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    isOnline:{
-      type: Boolean,
+    type:{
+      type: String,
+      enum: ['Online', 'Offline', 'Both'],
       required: true
     },
     price: {
