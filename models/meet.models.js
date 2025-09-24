@@ -47,26 +47,37 @@ const meetSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    type:{
+    type: {
       type: String,
-      enum: ['Online', 'Offline'],
-      required: true
+      enum: ["Online", "Offline"],
+      required: true,
     },
     price: {
       type: Number,
       required: true,
     },
     speakers: {
-      type: [String],
+      type: [
+        {
+          name: {
+            type: String,
+            required: true,
+          },
+          image: {
+            type: String,
+            required: true,
+          },
+        },
+      ],
       required: true,
     },
     dressCode: {
       type: String,
-      default: "None"
+      default: "None",
     },
     ageRestrictions: {
       type: String,
-      default: "No age restriction"
+      default: "No age restriction",
     },
     coverImage: {
       type: String,
